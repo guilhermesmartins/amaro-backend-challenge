@@ -15,6 +15,7 @@ class m220130_015413_create_product_table extends Migration
         $this->createTable('{{%product}}', [
             'id' => $this->primaryKey(),
             'name' => $this->string(120),
+            'product_id' => $this->integer()->unique(),
         ]);
     }
 
