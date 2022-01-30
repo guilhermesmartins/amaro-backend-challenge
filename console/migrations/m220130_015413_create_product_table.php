@@ -3,17 +3,18 @@
 use yii\db\Migration;
 
 /**
- * Handles the creation of table `{{%tags}}`.
+ * Handles the creation of table `{{%product}}`.
  */
-class m220130_013035_create_tags_table extends Migration
+class m220130_015413_create_product_table extends Migration
 {
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
-        $this->createTable('{{%tags}}', [
+        $this->createTable('{{%product}}', [
             'id' => $this->primaryKey(),
+            'name' => $this->string(120),
         ]);
     }
 
@@ -22,6 +23,6 @@ class m220130_013035_create_tags_table extends Migration
      */
     public function safeDown()
     {
-        $this->dropTable('{{%tags}}');
+        $this->dropTable('{{%product}}');
     }
 }
